@@ -1,0 +1,281 @@
+\documentclass[10pt]{article}
+\usepackage{charter}
+\usepackage{fullpage}
+\usepackage[colorlinks=false]{hyperref}
+\usepackage{ifthen}
+\usepackage[resetlabels]{multibib}
+% \usepackage{multibib}
+% \usepackage[openbib,ManyBibs]{currvita}
+% \usepackage[openbib]{currvita}
+% \usepackage[ManyBibs]{currvita}
+\usepackage{currvita}
+\addtolength{\topmargin}{-.2in}
+\addtolength{\textheight}{0.4in}
+\usepackage{paracol}
+\usepackage{titlesec}
+
+\titlespacing\subsection{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+
+\newcommand{\myname}[1]{\textbf{S. V. Venev}}
+
+\newcites{refpaper}{foo}
+\newcites{unrefpaper}{foo}
+\newcites{journal}{foo}
+\newcites{techreport}{foo}
+\newcites{submitpaper}{foo}
+\newcites{classproject}{foo}
+
+% Better for lists with 1-2 items and short descriptions
+\newenvironment{sublist}{%
+    \begin{list}{}{%
+        \setlength{\itemsep}{0em}\setlength{\parsep}{0em}%
+        \setlength{\topsep}{0em}\setlength{\parskip}{0em}%
+    }%
+}%
+{ \end{list} }
+
+% Better for lists with more than 2 items and/or long descriptions
+\newenvironment{subbulletlist}{%
+    \begin{list}{\labelitemii}{%
+        \setlength{\topsep}{\itemsep}\setlength{\parskip}{\parsep}%
+    }%
+}%
+{ \end{list} }
+
+
+% \newlength{\biblabelsep}
+% \setlength{\biblabelsep}{1ex}
+% \setlength{\bibindent}{2em}
+
+\begin{document}
+
+\bibliographystyle{ieeetr}
+\bibliographystylerefpaper{ieeetr}
+\bibliographystyleunrefpaper{ieeetr}
+\bibliographystylesubmitpaper{ieeetr}
+\bibliographystylejournal{ieeetr}
+\bibliographystyletechreport{ieeetr}
+\bibliographystyleclassproject{ieeetr}
+
+
+% \setlength{\bibhang}{2em}
+
+\newlength{\oldcvlabelwidth}
+\renewcommand*{\cvbibname}{}
+
+\begin{cv}{Sergey V. Venev\\{\large \itshape Curriculum Vitae}}
+% \begin{cv}{Sergey V. Venev}
+
+\begin{cvlist}{Contact}
+    \item Program in Bioinformatics and Integrative Biology\\
+    University of Massachusetts Medical School\\
+    368 Plantation St., Worcester, MA 01605\\
+    phone: +1(774)-312-4349\\
+    e-mail: \href{mailto:sergey.venev@umassmed.edu}{sergey.venev@umassmed.edu}
+\end{cvlist}
+
+
+\begin{cvlist}{Education}
+    \item[2008--2011] Ph.D. in Polymer Physics. Adviser: Prof. Igor I. Potemkin\\
+    Chair of Polymer and Crystal Physics, Lomonosov Moscow State University\\
+    Moscow, Russia  
+    \item[2002--2008] M.S. (honors) in Physics. Adviser: Prof. Igor I. Potemkin\\
+    Faculty of Physics, Lomonosov Moscow State University,
+    Moscow, Russia  
+% Thesis: Effects of electrostatic interactions and primary structure on self-organization of macromolecules: theoretical study
+\end{cvlist}
+
+
+
+\begin{cvlist}{Employment}
+    \item[2011--present] Postdoctoral Researcher, Computational Biology. Adviser: Prof. Konstantin B. Zeldovich\\
+    Program in Bioinformatics and Integrative Biology,\\ University of Massachusetts Medical School,
+    Worcester, MA   
+    \item[2009--2011] Visiting scholar, Polymer Physics. \\
+    Department of Polymer Science, Universit{\"a}t Ulm,
+    Ulm, Germany  
+% Thesis: Effects of electrostatic interactions and primary structure on self-organization of macromolecules: theoretical study
+\end{cvlist}
+
+
+
+% Skills ...
+\setlength{\oldcvlabelwidth}{\cvlabelwidth}
+\setlength{\cvlabelwidth}{1em}
+\begin{cvlist}{Research Experience}
+    \item[--] Statistical analysis of experimentally generated deep mutational scanning data for signal peptide of influenza A virus hemagglutinin. Structural RNA analysis to elucidate fitness effects of synonymous mutations.
+    \item[--] Statistical analysis of experimentally generated deep mutational scanning data for distant orthologous proteins. Analysis of the fitness landscapes and structural interpretation of the data.
+    \item[--] Bioinformatics analysis of Next Generation Sequencing data and software integration in a collaborative project focused on evolution of Influenza A virus under selective pressure and during reassortment.
+    \item[--] Biophysical modeling of Influenza virus genome packaging and Monte-Carlo simulation of evolving viral populations.
+    \item[--] Development of a novel GPU-accelerated lattice protein folding algorithm to model thermal adaptation in prokaryotes. NCBI database and text mining to extract environmental features of archeal and bacterial species followed by the statistical analysis of their genomes.
+    \item[--] Mean-field theory of copolymers and polyelectrolytes: effects of electrostatic interactions and primary structure of macromolecules on their self-organization in solutions.
+
+\end{cvlist}
+\setlength{\cvlabelwidth}{\oldcvlabelwidth}
+
+
+
+% Skills ...
+\setlength{\oldcvlabelwidth}{\cvlabelwidth}
+\setlength{\cvlabelwidth}{1em}
+\begin{cvlist}{Computational Skills}
+    % \item
+    % \begin{sublist}
+        \item Python scripting (IPython, Cython, NumPy, pandas, matplotlib, SciPy, BioPython)\\
+        C/C++, OpenMP, GPGPU programming: CUDA, Thrust, cuBLAS\\
+        Mathematical software: Mathematica, Maple, MATLAB\\
+        Bioinformatics software: BLAST, Muscle, T-Coffee, BWA, Bowtie, PyMol, UCSF Chimera, ViennaRNA
+    % \end{sublist}
+\end{cvlist}
+\setlength{\cvlabelwidth}{\oldcvlabelwidth}
+
+
+
+
+\setlength{\oldcvlabelwidth}{\cvlabelwidth}
+\setlength{\cvlabelwidth}{1em}
+\begin{cvlist}{Teaching experience}
+        \item[2015--present] Co-advised Yvonne Chan, graduate student, University of Massachusetts Medical School
+        \item[2010] Co-advised Dian Yang, visiting undergraduate scholar, Moscow State University
+        \item[2009] Co-advised Evgeniy Subirkin, undergraduate student, Moscow State University
+        \item[2009] Teaching Assistant, undergraduate physics laboratory, 7 students, Moscow State University
+\end{cvlist}
+\setlength{\cvlabelwidth}{\oldcvlabelwidth}
+
+
+
+\begin{cvlist}{Awards}
+    \item[2011] Russian Foundation for Basic Research travel grant RFBR11-03-09209  
+    \item[2009] Best oral presentation award at The $16^{th}$ conference ``Lomonosov--2009''  
+    \item[2007--2008] M.V. Lomonosov student scholarship, Moscow State University  
+    \item[2006] $5^{th}$ RAO UES of Russia award, ``New Generation'' on best qualification work 
+    \item[2001] Regional Olympiad in physics, entered the second stage, top 10\% of participants
+\end{cvlist}
+
+
+% % Miscellaneous
+% \setlength{\oldcvlabelwidth}{\cvlabelwidth}
+% \setlength{\cvlabelwidth}{1em}
+% \begin{cvlist}{Miscellaneous}
+% \item \textit{Date \& Place of birth:} 12/07/1985, Kashira, Moscow Region, Russia
+% \item \textit{Citizenship:} Russian
+% \item \textit{Marital Status:} Married, one child
+% \end{cvlist}
+% \setlength{\cvlabelwidth}{\oldcvlabelwidth}
+
+
+
+
+\setlength{\oldcvlabelwidth}{\cvlabelwidth}
+\setlength{\cvlabelwidth}{1em}
+% \renewcommand*{\bibindent}{2.5em}
+% Do bibaddtoleftmargin instead of biblabelsep if you're
+% not using manybib or openbib
+% \renewcommand*{\bibaddtoleftmargin}{1.5em}
+\renewcommand*{\biblabelsep}{1.5em}
+% \setbiblabelwidth{2em}
+% To update, before doing latexmk, run:
+% bibtex journal
+% bibtex refpaper
+% bibtex unrefpaper
+% bibtex techreport
+% bibtex submitpaper
+% \newpage
+% \bibliographystyle{acm}
+
+\begin{cvlist}{Peer--reviewed publications}
+% \setlength{\itemindent}{-.5in}
+    % \item \textbf{Peer reviewed}
+    \item
+    \nocitejournal{chan2016ncomm}
+    \nocitejournal{venev2015massively}
+    \nocitejournal{zeldovich2015positive}
+    \nocitejournal{venev2014swelling}
+    \nocitejournal{venev2013segment}
+    \nocitejournal{yang2011nematic}
+    \nocitejournal{venev2010direct}
+    \bibliographyjournal{citations}
+
+\end{cvlist}
+    % \item \textbf{Submitted and in preparation} 
+\begin{cvlist}{Submitted or in preparation}
+% \begin{cvlist}{Submitted}
+    \item
+    % \nocitesubmitpaper{chan2016ncomm}
+    \nocitesubmitpaper{venev2016biophysical}
+    \nocitesubmitpaper{venev2016jmb}
+    % \nocitesubmitpaper{venev2016virology}
+    \bibliographysubmitpaper{citations}
+\end{cvlist}
+    % \item \textbf{Conference presentations} 
+\begin{cvlist}{Conference presentations}
+    \item
+    \nociterefpaper{venev2015evolution}
+    \nociterefpaper{venev2013boston}
+    \nociterefpaper{venev2013virus}
+    \nociterefpaper{venev2012uconn}
+    \nociterefpaper{venev2011stpb}
+    \nociterefpaper{venev2011discrete}
+    \nociterefpaper{venev2011aps}
+    \nociterefpaper{venev2010germany}
+    \nociterefpaper{venev2010moscow}
+    \nociterefpaper{venev2009epf}
+    \nociterefpaper{venev2009lomonosov}
+    \nociterefpaper{venev2009germany}
+    \bibliographyrefpaper{citations}
+\end{cvlist}
+% \end{cvlist}
+\setlength{\cvlabelwidth}{\oldcvlabelwidth}
+   
+
+% \newpage
+%     \nocite{venev2011aps}
+%     \nocite{venev2010germany}
+%     \nocite{venev2010moscow}
+%     \nocite{venev2009epf}
+%     \nocite{venev2009lomonosov}
+%     \nocite{venev2009germany}
+%     \bibliographystyle{unstr}
+%     \bibliography{citations}
+
+
+
+\subsection*{References}
+% \vspace{-1\baselineskip}
+% \smallskipamount
+\noindent\makebox[\linewidth]{\rule{\textwidth}{0.5pt}}
+\vspace{0.1\baselineskip}
+\begin{paracol}{3}
+
+    Prof.\ Igor I. Potemkin\\
+    Physics Department, Moscow State University\\
+    Leninskie Gory 1-2, Moscow, Russia, 119991\\
+    phone:\ +7(495)-939-4013\\
+    e-mail:\ \href{mailto:igor@polly.phys.msu.ru}{igor\textrm{@}polly.phys.msu.ru}
+
+\switchcolumn
+
+    Prof.\ Konstantin B. Zeldovich\\
+    Program in Bioinformatics and Integrative Biology, University of Massachusetts Medical School\\
+    368 Plantation St.,\\ Worcester, MA, 01605\\
+    phone:\ +1(508)-856-2354\\
+    e-mail:\ \href{mailto:Konstantin.Zeldovich@umassmed.edu}{Konstantin.Zeldovich\\\textrm{@}umassmed.edu}
+
+
+% \switchcolumn
+%     Prof.\ C. Robert Matthews\\
+%     Department of Biochemistry and Molecular Pharmacology, University of Massachusetts Medical School\\
+%     364 Plantation St.,\\ Worcester, MA, 01605\\
+%     phone:\ +1(508)-856-2251\\
+%     e-mail:\ \href{mailto:C.Robert.Matthews@umassmed.edu}{C.Robert.Matthews\\\textrm{@}umassmed.edu}
+
+
+
+\end{paracol}
+
+
+
+
+\end{cv}
+\end{document}
+
